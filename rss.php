@@ -6,13 +6,13 @@ $feed_url = 'http://feeds.washingtonpost.com/rss/rss_volokh-conspiracy';
 if (issert($_GET['feed'])) {
 	switch (trim($_GET['feed'])) {
 		case 'guns':
-			$default_url = 'http://feeds.washingtonpost.com/rss/rss_volokh-conspiracy/guns';
+			$feed_url = 'http://feeds.washingtonpost.com/rss/rss_volokh-conspiracy/guns';
 			break;
 		case 'squirrelattacks':
-			$default_url = 'http://feeds.washingtonpost.com/rss/rss_volokh-conspiracy/squirrelattacks';
+			$feed_url = 'http://feeds.washingtonpost.com/rss/rss_volokh-conspiracy/squirrelattacks';
 			break;
 		case 'someotherfeed':
-			$default_url = 'http://www.rssfeeds.com/someotherfeed';
+			$feed_url = 'http://www.rssfeeds.com/someotherfeed';
 			break;
 	}
 }
