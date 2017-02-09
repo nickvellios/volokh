@@ -1,17 +1,18 @@
 <?PHP
 header('Content-Type: application/xml');
 
+// Default feed
 $feed_url = 'http://feeds.washingtonpost.com/rss/rss_volokh-conspiracy';
 
-if (issert($_GET['feed'])) {
+if (isset($_GET['feed'])) {
 	switch (trim($_GET['feed'])) {
-		case 'guns':
+		case 'guns': // If '?feed=guns' is appended to the URL, this will be the feed used
 			$feed_url = 'http://feeds.washingtonpost.com/rss/rss_volokh-conspiracy/guns';
 			break;
-		case 'squirrelattacks':
+		case 'squirrelattacks': // If '?feed=squirrelattacks' is appended to the URL, this will be the feed used
 			$feed_url = 'http://feeds.washingtonpost.com/rss/rss_volokh-conspiracy/squirrelattacks';
 			break;
-		case 'someotherfeed':
+		case 'someotherfeed': // If '?feed=someotherfeed' is appended to the URL, this will be the feed used
 			$feed_url = 'http://www.rssfeeds.com/someotherfeed';
 			break;
 	}
